@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right top, #b919d4, #3f79ff, #00a5ff, #00c4fe, #00dadf, #00e0d6, #00e5c8, #00e9b7, #00e3ca, #00dcd7, #39d4de, #5dcbdf);;
+}
+header .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+
+}
+header .head .shopName{
+    padding: 20px 0;
+    margin-left: 100px;
+    font-size: 33px;
+    font-family: slab serif, garamond, bodoni, and didot;
+    font-style: oblique 10deg;
+    font-weight: 700;
+}
+header .head .list1 ul, .list2 ul{
+    display: flex;
+    gap: 40px;
+    padding: 20px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: default;
+    font-weight: 600;
+}
+header .head .list2 ul{
+    margin-right: 100px;
+}
+header .head .list1 ul li, .list2 ul li{
+    list-style: none;
+
+}
+header .containt{
+   display: grid;
+   grid-template-rows: 40% 40%;
+   grid-template-columns: 40% 40%;
+   justify-content: center;
+   align-content: center;
+} 
+header .containt .text{
+    margin: auto;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+}
+header .containt .text h1{
+    font-size: 45px;
+    padding: 20px 0;
+    color: rgb(245, 245, 245);
+}
+header .containt .text h3{
+    color: rgba(128, 128, 128, 1);
+
+}
+.shoes img{
+    width: 700px;
+}
