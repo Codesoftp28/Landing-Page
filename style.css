@@ -7,8 +7,8 @@
     font-family: 'Poppins', sans-serif;
 }
 header{
-    width: 100vw;
-    height: 100vh;
+    width: calc(100vw-17px);
+    /* overflow-x: hidden; */
     background-image: linear-gradient(to right top, #b919d4, #3f79ff, #00a5ff, #00c4fe, #00dadf, #00e0d6, #00e5c8, #00e9b7, #00e3ca, #00dcd7, #39d4de, #5dcbdf);;
 }
 header .head{
@@ -28,41 +28,152 @@ header .head .shopName{
 }
 header .head .list1 ul, .list2 ul{
     display: flex;
-    gap: 40px;
+    gap: 20px;
     padding: 20px 0;
     font-family: 'Poppins', sans-serif;
     font-size: default;
     font-weight: 600;
 }
-header .head .list2 ul{
+header .head .list1 ul{
     margin-right: 100px;
+}
+header .head .list1 i{
+    display: none;
 }
 header .head .list1 ul li, .list2 ul li{
     list-style: none;
-
 }
 header .containt{
-   display: grid;
-   grid-template-rows: 40% 40%;
-   grid-template-columns: 40% 40%;
-   justify-content: center;
-   align-content: center;
-} 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 header .containt .text{
-    margin: auto;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    width: 40%;
+    padding-left:50px;
+}
+main{
+    background: rgba(128, 128, 128, 0.145);
+}
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+main .txt{
+    margin-top: 50px;
+}
+main .btn{
+    display: flex;
+    align-items: center;
+}
+main .btn button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+main .btn button i{
+    font-size: 24px;
+    font-weight: 900;
+    cursor: pointer;
+}
+ .sample{
+    margin: 80px 30px 0 30px;
+    display: flex;
+    overflow-x: hidden;
+    width: 300px;
+}
+main img{
+    width: 300px;
+}
 
+@media(max-width:1024px)
+{
+    header .head .shopName{
+        margin-left: 30px;
+    }
+    header .head .list1 i{
+        margin-right: 36px;
+    }
+    header .head .list1 ul{
+        margin-right: 36px;
+    }
+    header .containt  .shoes img{
+         margin-bottom:50px;
+        
+    }
 }
-header .containt .text h1{
-    font-size: 45px;
-    padding: 20px 0;
-    color: rgb(245, 245, 245);
-}
-header .containt .text h3{
-    color: rgba(128, 128, 128, 1);
 
+@media(max-width:771px)
+{
+    header .head .shopName{
+        margin-left: 50px;
+        font-size: 30px;
+    }
+    header .head .list1 ul{
+        display: none;        
+    }
+    header .head .list1 i{
+        display: flex;
+        margin-right: 30px;
+    }
+    header .containt .text h3{
+        font-size: 15px;
+        padding-bottom: 15px;
+    }
+    header .containt .text h1{
+        font-size: 28px;
+    }
+    header .containt  .shoes img{
+        width: 350px;
+         margin-bottom:50px;
+        
+    }
+    .sample{
+        width: 200px;
+    }
+    main img{
+        width: 200px;
+        gap: 20px;
+    }
+    
 }
-.shoes img{
-    width: 700px;
+
+@media(max-width:550px)
+{
+    header .containt  .shoes img{
+        width: 320px;
+    }
+    header .containt .text h1{
+        font-size: 22px;
+    }
+    header .containt .text h3{
+        font-size: 11px;
+        padding-bottom: 15px;
+    }
+    main .txt h3{
+        font-size: 15px;
+    }
+    main .txt h1{
+        font-size: 25px;
+    }
+}
+
+@media(max-width:380px)
+{
+      header .head .shopName{
+        margin-left: 30px;
+        font-size: 24px;
+    }
+    header .containt .text{
+        padding-left:30px;
+        width: auto;
+    }
+    header .containt{
+       flex-wrap:wrap ;
+    }
+    header .containt .shoes img{
+        margin-top:30px;
+    }
 }
