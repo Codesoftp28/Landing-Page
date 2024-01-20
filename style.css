@@ -8,14 +8,15 @@
 }
 header{
     width: calc(100vw-17px);
-    /* overflow-x: hidden; */
-    background-image: linear-gradient(to right top, #b919d4, #3f79ff, #00a5ff, #00c4fe, #00dadf, #00e0d6, #00e5c8, #00e9b7, #00e3ca, #00dcd7, #39d4de, #5dcbdf);;
+    overflow-x: hidden;
+    min-height: 80vh;
+    background-image: linear-gradient(to right top, #6125c7, #3050d9, #006ce1, #0082e1, #0096db, #1997dc, #2798dd, #3199de, #6b85dc, #9d6cc8, #c04ca2, #d12b6f);
 }
 header .head{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 35px 0;
+    height: 150px;
 
 }
 header .head .shopName{
@@ -25,20 +26,84 @@ header .head .shopName{
     font-family: slab serif, garamond, bodoni, and didot;
     font-style: oblique 10deg;
     font-weight: 700;
+    color: #f5f5f5;
+    text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.5);
+    animation: bouncetxt 0.5s infinite alternate;
+    animation-delay: 2s;
 }
-header .head .list1 ul, .list2 ul{
+@keyframes bouncetxt {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-1px) translateX(-1px);
+    }
+}
+.shoes img{
+    animation: bounceimg 2s infinite alternate;
+}
+@keyframes bounceimg {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px) translateX(-10px)  scale(1.03);
+    }
+}
+header .head .list1 ul{
     display: flex;
     gap: 20px;
     padding: 20px 0;
     font-family: 'Poppins', sans-serif;
     font-size: default;
     font-weight: 600;
+    color: #f5f5f5;
 }
-header .head .list1 ul{
+header .head .list1 .display{
     margin-right: 100px;
 }
-header .head .list1 i{
+
+/* home page when clicked on icon */
+.homepage{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    width: 120px;
+    height: 40vh;
+    text-align: center;
+    animation-name: in;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-delay: 1;
+    animation-iteration-count: 1;
+    margin-right:0;
+    position: relative;
+    z-index: 10;
+
+}
+@keyframes in {
+    from{
+        transform: translateX(140px);
+    }
+    to{
+        transform: translateX(0);
+    }
+    
+}
+
+
+header .head .list1 button,i{
     display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: white;
+}
+header .head .list1 button{
+    border: none;
+    outline: none;
+    background-color: transparent;
 }
 header .head .list1 ul li, .list2 ul li{
     list-style: none;
@@ -52,14 +117,13 @@ header .containt .text{
     width: 40%;
     padding-left:50px;
 }
-main{
-    background: rgba(128, 128, 128, 0.145);
-}
 main {
+    background-image: linear-gradient(to right top, #4c8ed1, #3883d3, #2478d4, #0f6cd3, #045fd2, #385bd3, #5256d3, #6850d2, #8c53d5, #aa56d6, #c65bd6, #df60d6);
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    min-height: 70vh;
 }
 main .txt{
     margin-top: 50px;
@@ -77,6 +141,9 @@ main .btn button i{
     font-size: 24px;
     font-weight: 900;
     cursor: pointer;
+    border: 2px solid #3498db;
+    color: #3498db;
+    background-color: #000;
 }
  .sample{
     margin: 80px 30px 0 30px;
@@ -87,6 +154,170 @@ main .btn button i{
 main img{
     width: 300px;
 }
+section{
+    overflow-x: hidden;
+}
+.container3{
+    background-image: linear-gradient(to right top, #df60d6, #d152d3, #c244d1, #b237d0, #a129ce, #9730d0, #8d35d2, #833ad3, #814bd6, #815ad8, #8267da, #8473da);
+    overflow-x: hidden;
+    min-height: 80vh;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.txt1{
+    width: 35%;
+    margin: 30px 0;
+}
+.txt1 h1{
+    font-size: 33px;
+    padding-bottom: 30px;
+}
+.container4,.container5{
+   min-height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(to right top, #60dfdd, #00cbed, #00b4ff, #0097ff, #0072ff, #675fef, #8e49da, #a92ac1, #bb3bba, #c94eb4, #d360b1, #da73af);
+}
+.container4 .box ,.container5 .shopimg{
+    background-image: linear-gradient(to right top, #223705, #5b4100, #a82e02, #ec0062, #eb12eb);
+    width: 520px;
+    height: 350px;
+    position: relative;
+}
+.container4 .box img, .container5 .shopimg img{
+    width: 500px;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    animation: bounce1 2s infinite alternate;
+}
+@keyframes bounce1 {
+    0% {
+        transform: translateY(0) translateX(0);
+
+    }
+    100% {
+        transform: translateY(-5px) translateX(-5px) scale(1.06);
+    }
+}
+.container4 .txt2{
+    width: 40%;
+}
+.container4 .txt2 h1,.container5 h1{
+    font-size: 33px;
+    padding: 20px 0;
+}
+.container4 .txt2 h3, .container5 h3{
+    font-size: 18px;
+
+}
+.container5{
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 80vh; */
+    background-color: rgba(128, 128, 128, 0.908) ;
+}
+.container5 .shop{
+    padding: 30px 0;
+    width: 40%;
+}
+.container5 .shop .btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -70px;
+}
+.container5 .shop button{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #3498db;
+    color: #3498db;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+   margin-top: 20px;
+}
+.container5 .shop button:hover{
+    background-color: #3498db;
+    color: #fff;
+}
+.button:focus, .button:active {
+    outline: none;
+  }
+
+.container5 .shopimg img{
+    width: 500px;
+}
+
+
+.form{
+    background-image: linear-gradient(to right top, #da73af, #d360b1, #c94eb4, #bb3bba, #a92ac1, #8e49da, #675fef, #0072ff, #0097ff, #00b4ff, #00cbed, #60dfdd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+  form {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right top, #65a1ff, #537dff, #3f5cff, #2b3cff, #163aff);
+    color: white;
+    margin:50px 0;
+  }
+  form>div{
+    text-align: center;
+  }
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    border-radius: 4px;
+  }
+
+  input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #333533;
+  }
+
+  footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  footer p {
+    margin: 0;
+  }
+
 
 @media(max-width:1024px)
 {
@@ -97,11 +328,25 @@ main img{
         margin-right: 36px;
     }
     header .head .list1 ul{
-        margin-right: 36px;
+        margin-right: 0;
     }
     header .containt  .shoes img{
          margin-bottom:50px;
         
+    }
+    .container3 .img img{
+        width: 450px;
+    }
+    .container4 .box , .container5 .shopimg{
+        width: 370px;
+        height: 270px;
+        position: relative;
+    }
+    .container4 .box img, .container5 .shopimg img{
+        width: 350px;
+        position: absolute;
+        top: -30px;
+        left: -30px;
     }
 }
 
@@ -111,10 +356,10 @@ main img{
         margin-left: 50px;
         font-size: 30px;
     }
-    header .head .list1 ul{
+    header .head .list1 .display{
         display: none;        
     }
-    header .head .list1 i{
+    header .head .list1 button,i{
         display: flex;
         margin-right: 30px;
     }
@@ -137,7 +382,31 @@ main img{
         width: 200px;
         gap: 20px;
     }
-    
+    .container3 .txt1{
+        width: 80%;
+    }
+    .txt1 h1{
+        font-size: 28px;
+    }
+    .txt1 h3{
+        font-size: 15px;
+    }
+    .container4,.container5{
+     flex-wrap: wrap;
+    }
+    .container4 .box, .container5 .shopimg{
+        margin-top: 100px;
+        margin-bottom: 40px;
+    }
+    .container4 .txt2{
+        width: 80%;
+    }
+    .container5{
+        flex-direction: column;
+    }
+    .container5 .shop{
+        width: 80%;
+    }
 }
 
 @media(max-width:550px)
@@ -155,8 +424,44 @@ main img{
     main .txt h3{
         font-size: 15px;
     }
-    main .txt h1{
+    .txt1 h3{
+        font-size: 12px;
+    }
+    main .txt h1, .txt1 h1{
         font-size: 25px;
+    }
+    .container3 .img img{
+        width: 350px;
+    }
+    .container4 .box , .container5 .shopimg{
+        width: 270px;
+        height: 170px;
+    }
+    .container4 .box img, .container5 .shopimg img{
+        width: 270px;
+        position: absolute;
+        top: -30px;
+        left: -30px;
+    }
+    .container4 .txt2 h1, .container5 .shop h1{
+        font-size: 25px;
+    }
+    .container4 .txt2 h3, .container5 .shop h4{
+        font-size: 12px;
+        margin-bottom: 30px;
+    }
+    .container5{
+        flex-wrap: wrap;
+    }
+}
+@media(max-width:450px)
+{
+    .containt{
+        flex-wrap: wrap;
+    }
+    header .containt .text{
+        width: 70vh;
+        padding: 60px 30px;
     }
 }
 
@@ -176,4 +481,18 @@ main img{
     header .containt .shoes img{
         margin-top:30px;
     }
+    .container3 .img img{
+        width: 300px;
+    }
+    .prebtn{
+        margin-right: -40px;
+    }
+}
+h1{
+    color: #ddd;
+    text-shadow: 14px 20px 20px rgba(0, 0, 0, 0.5);
+}
+h3,h4{
+    color: #fff;
+    text-shadow: 10px 20px 20px rgba(0, 0, 0, 0.5);
 }
